@@ -1,5 +1,52 @@
 = A Hash to object converter
 
+Allows you to convert complex Hashes into objects for more common use.
+
 In your Gemfile, make sure you have this gem:
 
   gem 'phantom-object'
+
+Now you can do this
+
+  h = {
+    key: "Some value",
+    another_key: "Another value"
+  }
+
+  o = PhantomObject.new(h)
+
+  p h.key
+  # => "Some value"
+  p h.another_key
+  # => "Some value"
+
+And even this
+
+  h = {
+    nested: {
+      key: "Some value"
+    }
+  }
+
+  o = PhantomObject.new(h)
+
+  p h.nested.key
+  # => "Some value"
+
+For any level, and with arrays
+
+And also you can do this, instead of PhantomObject.new()
+
+  h = {
+    key: "Some value",
+    another_key: "Another value"
+  }
+
+  o = h.to_object
+
+  p h.key
+  # => "Some value"
+  p h.another_key
+  # => "Some value"
+
+Also, PhantomObject includes ActiveModel, and you can extend it to use validations, form builders, etc.
