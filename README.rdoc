@@ -15,10 +15,10 @@ Now you can do this
 
   o = PhantomObject.new(h)
 
-  p h.key
+  p o.key
   # => "Some value"
-  p h.another_key
-  # => "Some value"
+  p o.another_key
+  # => "Another value"
 
 And even this
 
@@ -30,7 +30,7 @@ And even this
 
   o = PhantomObject.new(h)
 
-  p h.nested.key
+  p o.nested.key
   # => "Some value"
 
 For any level, and with arrays
@@ -44,9 +44,9 @@ And also you can do this, instead of PhantomObject.new()
 
   o = h.to_object
 
-  p h.key
+  p o.key
   # => "Some value"
-  p h.another_key
-  # => "Some value"
+  p o.another_key
+  # => "Another value"
 
 Also, PhantomObject includes ActiveModel, and you can extend it to use validations, form builders, etc.
