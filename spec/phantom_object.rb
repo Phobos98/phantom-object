@@ -44,11 +44,11 @@ describe PhantomObject do
   end
 
   it "Should raise an exception if hash key contains whitespace" do
-    expect { PhantomObject.new("a b" => 1) }.to raise_error
+    expect { PhantomObject.new("a b" => 1) }.to raise_error(ArgumentError, 'Your hash has keys with whitespaces')
   end
 
   it "Should raise an exception if hash key begins with a capital letter" do
-    expect { PhantomObject.new("a b" => 1) }.to raise_error
+    expect { PhantomObject.new("Abc" => 1) }.to raise_error(ArgumentError, 'Your hash has keys with Capital letters at the beginning')
   end
 
   it "Should add a converter method to_object to Hash" do
