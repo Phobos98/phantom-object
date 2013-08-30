@@ -1,3 +1,4 @@
+require 'hash_converter'
 class PhantomObject
 
   include ActiveModel::Validations
