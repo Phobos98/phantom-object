@@ -19,4 +19,6 @@ Gem::Specification.new do |s|
   s.has_rdoc = false
   s.extra_rdoc_files = Dir['[A-Z]*']
 
+  s.add_development_dependency "rspec"
+
 end
