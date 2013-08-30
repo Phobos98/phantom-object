@@ -1,0 +1,5 @@
+= A Hash to object converter
+
+In your Gemfile, make sure you have this gem:
+
+  gem 'phantom-object'
